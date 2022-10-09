@@ -3,9 +3,12 @@ server:
 spring:
   data:
     mongodb:
-      host: localhost
+      host: mongo:27017
       port: 27017
       authentication-database: admin
       username: root
       password: example
       database: mongo_db
+
+  #importante! o host para o host para o mongo dockerizado tem que ser: mongo:27017
+  #se não vai dar connection refused
