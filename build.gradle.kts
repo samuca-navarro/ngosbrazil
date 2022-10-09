@@ -22,6 +22,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation ("org.springframework.boot:spring-boot-starter-data-mongodb")
+	//testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 }
 
 tasks.withType<KotlinCompile> {

@@ -1,6 +1,11 @@
 package com.samuka.ngosbrazil.model
 
-class Ngo(val name: String,
+import org.springframework.data.mongodb.core.mapping.Document
+
+@Document
+data class Ngo(
+          val id: String,
+          val name: String,
           val adressLine1: String,
           val adressLine2: String,
           val city: String,
@@ -9,5 +14,7 @@ class Ngo(val name: String,
           val country: String,
           val email: String,
           val site: String,
+          val status: String,
           val socialNetworks: List<String>
         )
+
