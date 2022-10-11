@@ -1,11 +1,14 @@
 package com.samuka.ngosbrazil.model
 
+import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
+
 
 @Document
 data class Ngo(
           val id: String,
           val name: String,
+          val issue: String,
           val adressLine1: String,
           val adressLine2: String,
           val city: String,
