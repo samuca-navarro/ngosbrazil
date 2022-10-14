@@ -7,6 +7,6 @@ import org.springframework.data.mongodb.repository.Query
 interface NgoRepository : MongoRepository<Ngo, String>  {
 
     @Query("{issue:'?0'}")
-    fun findNgoByMatter(matter: String): List<Ngo>
+    fun findNgoByIssue(issue: String): List<Ngo>
 
 }
