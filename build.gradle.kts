@@ -24,6 +24,10 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation ("org.springframework.boot:spring-boot-starter-data-mongodb")
 	//testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
+	implementation("org.springdoc:springdoc-openapi-data-rest:1.6.12")
+	implementation("org.springdoc:springdoc-openapi-ui:1.6.12")
+	implementation("org.springdoc:springdoc-openapi-kotlin:1.6.12")
+    //http://localhost:8080/swagger-ui/index.html#/(acessar swagger)
 }
 
 tasks.withType<KotlinCompile> {
