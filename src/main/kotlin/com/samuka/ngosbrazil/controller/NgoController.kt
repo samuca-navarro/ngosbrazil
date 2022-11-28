@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("ongs")
 class NgoController (val ngoService: NgoService) {
 
-//    @Autowired
-//    lateinit var ngoService: NgoService
-
-//    @Autowired
-//    lateinit var ngoRepository: NgoRepository
-
     @GetMapping("api/{issue}")
-    fun returnMatter(@PathVariable("issue") issue: String): ResponseEntity<List<Ngo>>{
+    fun returnByMatter(@PathVariable("issue") issue: String): ResponseEntity<List<Ngo>>{
        val ngos = ngoService.findNgoByIssue(issue)
        return ResponseEntity.ok(ngos)
+    }
+
+    @GetMapping("api/{city}")
+    fun returnByCity(@PathVariable("city") city: String): ResponseEntity<List<Ngo>>{
+        val ngos = ngoService.findNgoByCity(city)
+        return ResponseEntity.ok(ngos)
     }
 
     @PostMapping
@@ -25,4 +25,12 @@ class NgoController (val ngoService: NgoService) {
         val ngoSave = ngoService.createNgo(ngo)
         return ResponseEntity.ok(ngoSave)
     }
+
+    @DeleteMapping
+    fun delete(@PathVariable id: String){
+        ngoService.deleteNgoById(id)
+    }
+
+
+
 }

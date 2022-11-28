@@ -10,4 +10,10 @@ class NgoService (val ngoRepository: NgoRepository) {
     fun createNgo(ngo: Ngo): Ngo = ngoRepository.save(ngo)
 
     fun findNgoByIssue(issue: String): List<Ngo> = ngoRepository.findNgoByIssue(issue)
+
+    fun findNgoByCity(city: String): List<Ngo> = ngoRepository.findNgoByCity(city)
+
+    fun deleteNgoById(id: String) {
+        ngoRepository.deleteById(id)
+    }
 }

@@ -9,4 +9,7 @@ interface NgoRepository : MongoRepository<Ngo, String>  {
     @Query("{issue:'?0'}")
     fun findNgoByIssue(issue: String): List<Ngo>
 
+    @Query("{city:'?0'}")
+    fun findNgoByCity(city: String): List<Ngo>
+
 }
